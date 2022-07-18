@@ -1,11 +1,8 @@
 <?php
 	include_once 'dbh.inc.php';
 	
-	$conn = OpenCon();
-	echo "Connection Successful :)";
-	
+	$conn = OpenCon();	
 	CloseCon($conn);
-	
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +11,7 @@
 	<title></title>
 <head>
 <body>
+	<h1>Welcome to the Art Gallery Database!</h1>
 
 </body>
 </html>
