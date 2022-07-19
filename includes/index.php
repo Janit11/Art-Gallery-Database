@@ -1,24 +1,31 @@
 <?php
 	include_once 'dbh.inc.php';
-
-	$conn = OpenCon();	
-	CloseCon($conn);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<script>
+	<!-- <script>
 		function artistBut() {
 			window.open("artists.php");
 		}
-	</script>
+	</script> -->
 <head>
 <body>
 	<h1>Welcome to the Art Gallery Database!</h1>
 	
-	<button onclick="artistBut()"> Artists </button>
-
 </body>
 </html>
+
+<?php
+	require "header.php";
+?>
+<main>
+	<p style="text-align:center;"> You are logged in! </p>
+	<p style="text-align:center;"> You are logged out! </p>
+</main>
+
+<?php
+	require "footer.php";
+?>
