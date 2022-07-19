@@ -68,3 +68,10 @@ CREATE TABLE Organizes (
 	PRIMARY KEY (sID, exID),
 	FOREIGN KEY (sID) REFERENCES Staff_Managedby(sID),
 	FOREIGN KEY (exID) REFERENCES Exhibition_Held(exID));
+	
+CREATE TABLE users (
+    idUsers int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    uidUsers TINYTEXT NOT NULL,
+    emailUsers TINYTEXT NOT NULL,
+    passwrd LONGTEXT NOT NULL
+);
