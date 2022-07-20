@@ -1,14 +1,16 @@
+<?php
+    include_once 'include/dbh.inc.php';
+    require 'header.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 <head>
 <body>
-	<h1>This is a list of all artists currently in the database:</h1>
-
+    <h1>Artists:</h1>
+    <!-- <p>Please fill in all fields to add a new artist.</p> -->
 	<?php
-    	include_once 'include/dbh.inc.php';
-
         $conn = OpenCon();
         $sql = "SELECT * FROM Artist;";
         $result = $conn->query($sql);
@@ -17,9 +19,11 @@
         echo "<br>";
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo $row['name'];
-                echo "<br>"; 
-
+                echo "Artist ID: {$row['artistID']} <br>
+                    Name: {$row['name']} <br>
+                    Age: {$row['age']} <br>
+                    Rating: {$row['rating']}";
+                echo "<br> <br>"; 
             }
         }
 
