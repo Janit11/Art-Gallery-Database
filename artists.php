@@ -7,7 +7,7 @@
 	<h1>This is a list of all artists currently in the database:</h1>
 
 	<?php
-    	include_once 'dbh.inc.php';
+    	include_once 'include/dbh.inc.php';
 
         $conn = OpenCon();
         $sql = "SELECT * FROM Artist;";
