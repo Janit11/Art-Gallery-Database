@@ -16,7 +16,7 @@
                     <li><a class="active" href="index.php">Home</a></li>
                     <li><a href="artists.php">Artists</a></li>
                     <li><a href="#">Art Works</a></li>
-                    <li><a href="#">Museums</a></li>
+                    <li><a href="museum.php">Museums</a></li>
                     <li><a href="#">Exhibitions</a></li>
                 </ul>
 
