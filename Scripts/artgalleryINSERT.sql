@@ -34,11 +34,11 @@ INSERT INTO BelongsTo VALUES ('003', 'Paper Sculpture');
 INSERT INTO BelongsTo VALUES ('004', 'Short Film');
 INSERT INTO BelongsTo VALUES ('005', 'Acrylic Painting');
 
-INSERT INTO Exhibition_Held VALUES ('A01', 'mus1', 2022-06-30, 'Vancouver', 'The Space of Creativity', 'Fantasy');
-INSERT INTO Exhibition_Held VALUES ('B02', 'mus2', 2022-05-29, 'Richmond', 'Dessert Art Exhibit', 'Food');
-INSERT INTO Exhibition_Held VALUES ('C03', 'mus3', 2022-07-03, 'Surrey', 'Interfaith Art Exhibit', 'Nature');
-INSERT INTO Exhibition_Held VALUES ('D04', 'mus4', 2022-04-20, 'Burnaby', 'Oriental Adventures', 'Stories');
-INSERT INTO Exhibition_Held VALUES ('E05', 'mus5', 2022-03-25, 'Coquitlam', 'Head in the Clouds', 'Space and Beyond');
+INSERT INTO Exhibition_Held VALUES ('A01', 'mus1', '2022-06-30', 'Vancouver', 'The Space of Creativity', 'Fantasy');
+INSERT INTO Exhibition_Held VALUES ('B02', 'mus2', '2022-05-29', 'Richmond', 'Dessert Art Exhibit', 'Food');
+INSERT INTO Exhibition_Held VALUES ('C03', 'mus3', '2022-07-03', 'Surrey', 'Interfaith Art Exhibit', 'Nature');
+INSERT INTO Exhibition_Held VALUES ('D04', 'mus4', '2022-04-20', 'Burnaby', 'Oriental Adventures', 'Stories');
+INSERT INTO Exhibition_Held VALUES ('E05', 'mus5', '2022-03-25', 'Coquitlam', 'Head in the Clouds', 'Space and Beyond');
 
 INSERT INTO Ticket_Sells VALUES ('A01', 10001, 25, 'Adult');
 INSERT INTO Ticket_Sells VALUES ('B02', 10002, 19, 'Student');
