@@ -8,7 +8,7 @@
 	<title></title>
 <head>
 <body>
-    <h1>Museums:</h1>
+    <h1>Exhibitions:</h1>
 	<?php
         $conn = OpenCon();
         $sql = "SELECT * FROM Exhibition_Held, Museum WHERE Exhibition_Held.mID = Museum.mID;";
