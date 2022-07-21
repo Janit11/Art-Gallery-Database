@@ -17,7 +17,7 @@
                     <li><a href="artists.php">Artists</a></li>
                     <li><a href="#">Art Works</a></li>
                     <li><a href="museum.php">Museums</a></li>
-                    <li><a href="#">Exhibitions</a></li>
+                    <li><a href="exhibition.php">Exhibitions</a></li>
                 </ul>
 
                 <div class ="header-right">
