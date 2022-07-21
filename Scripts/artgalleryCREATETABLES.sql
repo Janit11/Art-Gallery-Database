@@ -73,5 +73,4 @@ CREATE TABLE users (
     idUsers int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
     uidUsers TINYTEXT NOT NULL,
     emailUsers TINYTEXT NOT NULL,
-    passwrd LONGTEXT NOT NULL
-);
+    passwrd LONGTEXT NOT NULL);
