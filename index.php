@@ -22,8 +22,9 @@
 	require "header.php";
 ?>
 <main>
-	<p style="text-align:center;"> You are logged in! </p>
-	<p style="text-align:center;"> You are logged out! </p>
+	<!-- <p style="text-align:center;"> You are logged in! </p>
+	<p style="text-align:center;"> You are logged out! </p> -->
+	<p style="text-align:center;">Welcome :D</p>
 </main>
 
 <?php
