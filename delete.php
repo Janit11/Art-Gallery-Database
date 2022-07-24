@@ -32,8 +32,6 @@
  
 <?php
     $conn = OpenCon();
-    // $conn = mysqli_connect("localhost", "root", "root");
-    // $db = mysqli_select_db($conn, 'art gallery');
     if(isset($_POST['delete'])) {
         $id = $_POST['artistID'];
 
