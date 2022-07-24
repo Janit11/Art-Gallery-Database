@@ -39,9 +39,9 @@
         $query_run = mysqli_query($conn, $query);
 
         if($query_run) {
-            echo '<script> type="text/javascript"> alert("Data Deleted")</script>';
+            header("Location: ../artists.php?delete=success");
         } else {
-            echo '<script> type="text/javascript"> alert("Data Not Deleted D:")</script>';
+            header("Location: ../delete.php?error=deleteerror");
         }
     }
 
