@@ -3,7 +3,7 @@
     include_once 'include/dbh.inc.php';
     require 'header.php';
     $conn = OpenCon();
-    $sql1 = "SHOW COLUMNS FROM Curator";
+    $sql1 = "SHOW COLUMNS FROM Artwork_Create_IsIn";
     $result = $conn->query($sql);
 ?>
 
