@@ -18,6 +18,9 @@
                     <li><a href="#">Art Works</a></li>
                     <li><a href="museum.php">Museums</a></li>
                     <li><a href="exhibition.php">Exhibitions</a></li>
+                    <li><a href="exhibition.php">Tickets</a></li>
+                    <li><a href="exhibition.php">Curators</a></li>
+
                 </ul>
 
                 <div class ="header-right">
