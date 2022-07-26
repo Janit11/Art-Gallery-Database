@@ -44,7 +44,7 @@
 
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo $row;
+                echo $row[1]." ".$row[2]." ".$row[3]." ".$row[4]." ".$row[5];
                     
                 echo " <br>"; 
             }
