@@ -9,11 +9,13 @@
 <head>
 <body>
     <h1>Artists:</h1>
-    <!-- <p>Please fill in all fields to add a new artist.</p> -->
+    <li><a href="delete.php">Delete Artist</a></li>
+    <li><a href="update.php">Update Artist</a></li>
+
 	<?php
         $conn = OpenCon();
         $sql = "SELECT * FROM Artist;";
-        $result = $conn->query($sql);
+        $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 
         echo "<br>";
@@ -26,7 +28,6 @@
                 echo "<br> <br>"; 
             }
         }
-
 	?>
 </body>
 </html>
