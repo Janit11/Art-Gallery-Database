@@ -27,13 +27,13 @@
     <form action="" method="POST">
         <input type="text" name="price" placeholder="Price">
  
-        <input type="submit" name="enter" value="Enter"> 
+        <input type="submit" name ="enter" value="Enter"> 
     </form>
 
 </body>
 </html> 
 <?php
-    $conn = OpenCon();
+    $conn = OpenCon() ;
     if(isset($_POST['price'])){
         $price = $_POST["Price"];
         echo $price;
