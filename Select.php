@@ -34,22 +34,24 @@
 </html> 
 <?php
     $conn = OpenCon() ;
-    if(isset($_POST['price'])){
-        $price = $_POST["Price"];
+    if(isset($_POST['enter'])){
+        $price = $_POST["price"];
         echo $price;
 
-        $sql = "SELECT ticketType, FROM Ticket_Sells, WHERE price >".$price;
-        $result = mysqli_query($conn, $sql);
+        $sql = "SELECT ticketType FROM Ticket_Sells WHERE price >'$price' ";
+        $result = $conn->query($sql);
         $resultCheck = mysqli_num_rows($result);
 
         echo "<br>";
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo 
-                    $row[1]." ".$row[2]." ".$row[3]." ".$row[4]." ".$row[5];
+                echo "
+                    Type: {$row['ticketType']} <br>
+                    Price: {$row['price']} <br>";
                 echo "<br> <br>"; 
+            }
         }
-    }
+
     }
 
 ?>
