@@ -42,20 +42,18 @@
     <?php
         if(isset($_POST["Submit"])) {
 
-            $sql2 = "SELECT * FROM Curator";
-            $result2 = $conn->query($sql2);
-            $resultCheck2 = mysqli_num_rows($result2);
+        
             $rowName = $_POST["rowName"];
             echo " <br>"; 
             echo $rowName;
+
+            $sql2 = "SELECT '$rowName' FROM Curator";
+            $result2 = $conn->query($sql2);
+            $resultCheck2 = mysqli_num_rows($result2);
             
             if ($resultCheck2 > 0) {
                 while ($row = mysqli_fetch_array($result2)) { 
-                    if(($rowName == 'cID')) {
-                        echo $row['cID'];
-                    } else {
-                        echo "none";
-                    }     
+                    echo $row;
                         
                     echo " <br>"; 
                 }
