@@ -5,12 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<!-- <script>
-		function artistBut() {
-			window.open("artists.php");
-		}
-	</script> -->
+	<title>home page</title>
 <head>
 <body>
 	<h1>Welcome to the Art Gallery Database!</h1>

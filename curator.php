@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Curators</title>
 <head>
 <body>
     <h1>Artists:</h1>

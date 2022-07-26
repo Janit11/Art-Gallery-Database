@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>List of Museums</title>
 <head>
 <body>
     <h1>Museums:</h1>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>List of Tickets</title>
     <link rel="stylesheet" href="style2.css">
 
 <head>
