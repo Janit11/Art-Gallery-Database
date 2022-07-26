@@ -15,7 +15,7 @@
                 <ul>
                     <li><a class="active" href="index.php">Home</a></li>
                     <li><a href="artists.php">Artists</a></li>
-                    <li><a href="#">Art Works</a></li>
+                    <li><a href="artworks.php">ArtWorks</a></li>
                     <li><a href="museum.php">Museums</a></li>
                     <li><a href="exhibition.php">Exhibitions</a></li>
                     <li><a href="ticket_sells.php">Tickets</a></li>
