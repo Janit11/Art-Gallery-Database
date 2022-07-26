@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Select</title>
+	<title>Join</title>
     <style>
         input{
             padding: 12px;
