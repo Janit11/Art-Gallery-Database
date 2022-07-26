@@ -19,7 +19,7 @@
                     <li><a href="museum.php">Museums</a></li>
                     <li><a href="exhibition.php">Exhibitions</a></li>
                     <li><a href="ticket_sells.php">Tickets</a></li>
-                    <li><a href="Curator.php">Curators</a></li>
+                    <li><a href="curator.php">Curators</a></li>
 
                 </ul>
 
