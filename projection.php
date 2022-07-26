@@ -27,7 +27,7 @@
     <h1>Projection Query</h1>	
     <p>Project a column from the Curator table </p>
     <form method = "POST">
-    <select name = "rowName">
+    <select name = "colName">
         <option> -- Select a column -- </option>
         <?php 
             while ($row = mysqli_fetch_array($result)) {
@@ -43,11 +43,11 @@
         if(isset($_POST["Submit"])) {
 
         
-            $rowName = $_POST["rowName"];
+            $colName = $_POST["colName"];
             echo " <br>"; 
-            echo $rowName;
+            echo $colName;
 
-            $sql2 = "SELECT '$rowName' FROM Curator";
+            $sql2 = "SELECT '$colName' FROM Curator";
             $result2 = $conn->query($sql2);
             $resultCheck2 = mysqli_num_rows($result2);
             
