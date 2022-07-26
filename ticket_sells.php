@@ -6,10 +6,14 @@
 <html>
 <head>
 	<title></title>
+    <link rel="stylesheet" href="style2.css">
+
 <head>
 <body>
     <h1>Tickets:</h1>
-    <li><a href="select.php">View Tickets by Price</a></li>
+    <div class="wrapper">
+        <p><a class="active" href="select.php">View Tickets by Price</a></p>
+    </div>
 	<?php
         $conn = OpenCon();
         $sql = "SELECT * FROM Ticket_Sells, Exhibition_Held WHERE Ticket_Sells.exID = Exhibition_Held.exID;";

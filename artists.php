@@ -5,12 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Artists</title>
+    <link rel="stylesheet" href="style2.css">
+
 <head>
 <body>
     <h1>Artists:</h1>
-    <li><a href="delete.php">Delete Artist</a></li>
-    <li><a href="update.php">Update Artist</a></li>
+    <div class="wrapper">
+        <p><a class="active" href="delete.php">Delete Artist</a></p>
+        <p><a class="active" href="update.php">Update Artist</a></p>
+    </div>
 
 	<?php
         $conn = OpenCon();

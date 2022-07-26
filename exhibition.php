@@ -5,11 +5,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>List of Exhibitions</title>
+    <link rel="stylesheet" href="style2.css">
 <head>
 <body>
     <h1>Exhibitions:</h1>
-    <li><a href="ticket_sells.php">View All Tickets</a></li>
+    <div class="wrapper">
+    <p><a class="active" href="ticket_sells.php">View All Tickets</a></p>
+
+    </div>    
 	<?php
         $conn = OpenCon();
         $sql = "SELECT * FROM Exhibition_Held, Museum WHERE Exhibition_Held.mID = Museum.mID;";
