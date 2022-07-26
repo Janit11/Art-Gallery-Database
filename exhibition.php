@@ -11,8 +11,8 @@
 <body>
     <h1>Exhibitions:</h1>
     <div class="wrapper">
-    <p><a class="active" href="ticket_sells.php">View All Tickets</a></p>
-
+        <p><a class="active" href="ticket_sells.php">View All Tickets</a></p>
+        <p><a class="active" href="curator.php">View Curators managing Exhibitions</a></p>
     </div>    
 	<?php
         $conn = OpenCon();
