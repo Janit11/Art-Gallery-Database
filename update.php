@@ -45,8 +45,9 @@
         $age = $_POST['age'];
         $rating = $_POST['rating'];
 
-        $query = "UPDATE artist SET name='$name', age='$age', rating='$rating' WHERE artistID='$id' ";
+        $query = "UPDATE artist SET name ='$name', age='$age', rating ='$rating' WHERE artistID='$id' ";
         // $query = "UPDATE artist SET name="$_POST[name]
+        
         $query_run = mysqli_query($conn, $query);
 
         if($query_run) {
