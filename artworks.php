@@ -13,6 +13,7 @@
     <h1>Artworks</h1>
     <div class="wrapper">
         <p><a class="active" href="artForms.php">View Art forms</a></p>
+        <p><a class="active" href="join.php">Join Tables</a></p>
     </div>
 	<?php
         $conn = OpenCon();
