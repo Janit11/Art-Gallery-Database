@@ -29,8 +29,8 @@
 <body>
     <h1>Join Query</h1>	
     <p>Join the columns from both tables to get the desired result. </p>
-    <form method = "POST">
-    <select name = "colName" multiple>
+    <form id = "join-cols">
+    <select name = "colNames" multiple>
         <optgroup label="first-choice">
             <option> -- Select a column -- </option>
             <?php 
@@ -53,11 +53,19 @@
         ?>
     <select>
         <input type = "submit" name = "Submit" value = "Choose" />
+        <!--<script>
+            var form = document.getElementById('join-cols');
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                var checkCols = document.getElementsByName('colNames');
+                
+            })
+        </script>-->
     <?php
         if(isset($_POST["Submit"])) {
 
         
-            $colName = $_POST["colName"];
+            $colName = $_POST["colNames"];
             echo " <br>"; 
             echo $colName;
 
