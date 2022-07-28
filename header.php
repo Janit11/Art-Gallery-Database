@@ -17,14 +17,11 @@
                     <li><a href="artists.php">Artists</a></li>
                     <li><a href="artworks.php">ArtWorks</a></li>
                     <li><a href="museum.php">Museums</a></li>
-                    <li><a href="exhibition.php">Exhibitions</a></li>
-                    <li><a href="ticket_sells.php">Tickets</a></li>
-                
-
+                    <li><a href="exhibition.php">Exhibitions</a></li>                
                 </ul>
 
                 <div class ="header-right">
-                    <form action="include/login.inc.php" method="post"> <!-- might cause problems --> 
+                    <form action="include/login.inc.php" method="post">
                         <input type="text" name="mailuid" placeholder="Username...">
                         <input type="password" name="pwd" placeholder="Password...">
                         <button type="submit" name="login-submit">Login</button>
