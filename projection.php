@@ -1,9 +1,7 @@
 <?php
     include_once 'include/dbh.inc.php';
     require 'header.php';
-    $conn = OpenCon();
-    $sql = "SHOW COLUMNS FROM Curator";
-    $result = $conn->query($sql);
+    
 ?>
 
 <!DOCTYPE html>
@@ -25,35 +23,41 @@
 <head>
 <body>
     <h1>Projection Query</h1>	
-    <p>Project a column from the Curator table </p>
+    <p>Choose a column to project </p>
+    <p>  </p>
+    <p>cID</p>
+    <p>fname </p>
+    <p>lname </p>
+    <p>education </p>
+
+
     <form method = "POST">
+        <!--
     <select name = "colName">
         <option> -- Select a column -- </option>
-        <?php 
-            while ($row = mysqli_fetch_array($result)) {
-                ?>
-                <option value="<?php echo $row["Field"]; ?> " > <?php echo $row["Field"]; ?> </option>
-
-        <?php
-        }
-        ?>
     <select>
         <input type = "submit" name = "Submit" value = "Choose" />
+    -->
+        <form action="" method="POST">
+        <input type="text" name="column" placeholder="Column">
+ 
+        <input type="submit" name ="enter" value="Choose"> 
+    </form>
     <?php
-        if(isset($_POST["Submit"])) {
+        if(isset($_POST["enter"])) {
 
         
-            $colName = $_POST["colName"];
+            $colName = $_POST["column"];
             echo " <br>"; 
             echo $colName;
 
-            $sql2 = "SELECT '$colName' FROM Curator";
+            $sql2 = "SELECT '$colName' FROM Curator'";
             $result2 = $conn->query($sql2);
             $resultCheck2 = mysqli_num_rows($result2);
             
             if ($resultCheck2 > 0) {
                 while ($row = mysqli_fetch_array($result2)) { 
-                    echo $row;
+                    echo $row[$colName];
                         
                     echo " <br>"; 
                 }
