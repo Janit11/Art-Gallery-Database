@@ -29,8 +29,7 @@
  
         <input type="submit" name ="enter" value="Enter"> 
     </form>
-</body>
-</html> 
+
 <?php
     $conn = OpenCon() ;
     if(isset($_POST['enter'])){
@@ -48,32 +47,3 @@
 ?>
 
 
-<!--give an option to either select age or rating through input, save it and echo it 
-    and then compute the average through sql and return all the artists according to the selected option, make if else for age or rating
-if($option == "age"){
-            
-            $sql = "SELECT AVG($option) AS average FROM Artist;";
-            $result == mysqli_query($conn, $sql);
-            $resultCheck = mysqli_num_rows($result);
-            if ($resultCheck > 0) {
-                while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                    echo "The current average age of all artists is: ". $row['average'];
-                        
-                    echo " <br>"; 
-                }
-            }
-
-        }
-        if($option == "rating"){
-            $sql = "SELECT AVG(rating) FROM Artist;";
-            $result == mysqli_query($conn, $sql);
-            $resultCheck = mysqli_num_rows($result);
-            if ($resultCheck > 0) {
-                while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                    echo $row['AVG(rating)'];
-                    echo "The current average age of all artists is: ". $row['AVG(rating)'];
-                    echo " <br>"; 
-                }
-            }
-
-        }-->
