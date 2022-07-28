@@ -1,12 +1,12 @@
 <?php
     include_once 'include/dbh.inc.php';
     require 'header.php';
+    $sql_t1 = "SHOW COLUMNS FROM Artwork_Create_IsIn";
+    $sql_t2 = "SHOW COLUMNS FROM belongsTo";
     $conn = OpenCon();
-    $sql1 = "SHOW COLUMNS FROM Artwork_Create_IsIn";
-    $result1 = $conn->query($sql1);
-    $sql2 = "SHOW COLUMNS FROM BelongsTo ";
-    $result2 = $conn->query($sql2);
 
+    $result_t1 = mysqli_query($conn, $sql_t1);
+    $result_t2 = mysqli_query($conn, $sql_t2);
 ?>
 
 <!DOCTYPE html>
@@ -25,65 +25,51 @@
             color: black;
         }
     </style>
+
 <head>
 <body>
     <h1>Join Query</h1>	
-    <p>Join the columns from both tables to get the desired result. </p>
-    <form id = "join-cols">
-    <select name = "colNames" multiple>
-        <optgroup label="first-choice">
-            <option> -- Select a column -- </option>
-            <?php 
-                while ($row = mysqli_fetch_array($result1)) {
-                    ?>
-                    <option value="<?php echo $row["Field"]; ?> " > <?php echo $row["Field"]; ?> </option>
+    <form action="" method="POST">
+        <p>Join the columns from both tables to get the desired result. </p>
+        <select name="t1" >
+            <option value="No option selected"> [Choose Option Below] </option>
+            <?php while ($rows = mysqli_fetch_array($result_t1)) {
+                ?>
+                <option value="<?php echo $rows["Field"]; ?>"> <?php echo $rows["Field"]; ?> </option>
 
-            <?php
+            <?php    
             }
-        ?>
-        <optgroup label="second-choice">
-        <option> -- Select a column -- </option>
-            <?php 
-                while ($row = mysqli_fetch_array($result2)) {
-                    ?>
-                    <option value="<?php echo $row["Field"]; ?> " > <?php echo $row["Field"]; ?> </option>
-                   
-            <?php
-            }
-        ?>
-    <select>
-        <input type = "submit" name = "Submit" value = "Choose" />
-        <!--<script>
-            var form = document.getElementById('join-cols');
-            form.addEventListener('submit', function(e){
-                e.preventDefault();
-                var checkCols = document.getElementsByName('colNames');
-                
-            })
-        </script>-->
-    <?php
-        if(isset($_POST["Submit"])) {
+            ?>
+        </select>
 
-        
-            $colName = $_POST["colNames"];
-            echo " <br>"; 
-            echo $colName;
-
-            $sql3 = "SELECT '$colName' FROM Artwork_Create_IsIn, BelongsTo WHERE Artwork_Create_IsIn.artID = BelongsTo.artID
-            ORDER BY artID";
-            $result3 = $conn->query($sql3);
-            $resultCheck = mysqli_num_rows($result3);
-            
-            if ($resultCheck2 > 0) {
-                while ($row = mysqli_fetch_array($result3)) { 
-                    echo $row;
-                        
-                    echo " <br>"; 
-                }
+        <select name ="t2">
+            <option value="No option selected"> [Choose Option Below] </option>
+            <?php while ($rows = mysqli_fetch_array($result_t2)) {
+                ?>
+                <option value="<?php echo $rows["Field"]; ?>"> <?php echo $rows["Field"]; ?> </option>
+            <?php    
             }
-        }
-    ?>
-    <form>
+            ?>
+        </select>
+        <input type="submit" name="button" value="Join">
+    </form>
     
 </body>
 </html> 
+
+<?php
+    $selectT1 = $_POST['t1'];
+    $selectT2 = $_POST['t2'];
+
+
+    $query = "SELECT '.$selectT1', '.$selectT2' FROM Artwork_Create_IsIn art, belongsTo bel WHERE art.artID = bel.artID";
+    $result = mysqli_query($conn, $query);
+    $resultCheck = mysqli_num_rows($result);
+
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_assoc($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
+                echo "$selectT1: {$row[$selectT1]} <br>
+                    $selectT2: {$row[$selectT2]}"; //***PROBLEM HERE
+            }
+        }
+?>
