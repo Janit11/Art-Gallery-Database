@@ -14,6 +14,7 @@
     <div class="wrapper">
         <p><a class="active" href="delete.php">Delete Artist</a></p>
         <p><a class="active" href="update.php">Update Artist</a></p>
+        <p><a class="active" href="aggregation.php">Average Age/Rating</a></p>
     </div>
 
 	<?php

@@ -21,8 +21,7 @@
         }
     </style>
 <head>
-<body>
-    <h1>Aggregation Query</h1>	
+<body>	
     <p>Retrieve the average age or rating of all artists </p>
     <form action="" method="POST">
         <input type="text" name="option" placeholder="Choose age or rating">
@@ -30,20 +29,21 @@
         <input type="submit" name ="enter" value="Enter"> 
     </form>
 
-<?php
-    $conn = OpenCon() ;
-    if(isset($_POST['enter'])){
-        $option = $_POST["option"];
+    <?php
+        $conn = OpenCon() ;
+        if(isset($_POST['enter'])){
+            $option = $_POST["option"];
 
-        $sql = "SELECT ROUND(AVG($option)) AS average FROM artist";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_array($result)) {
-            echo "The current average age of all artists is: ". $row['average'];
-            echo "<br />";
+            $sql = "SELECT ROUND(AVG($option)) AS average FROM artist";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_array($result)) {
+                echo "The current average age of all artists is: ". $row['average'];
+                echo "<br />";
 
+        }
     }
-}
-
-?>
+    ?>
+</body>
+</html>
 
 
