@@ -1,6 +1,0 @@
-CREATE TABLE Artist (
-	artistID INTEGER PRIMARY KEY,
-	rating INTEGER,
-	age INTEGER,
-	name CHAR(100));
-	
