@@ -29,45 +29,51 @@
     <p>fname </p>
     <p>lname </p>
     <p>education </p>
-
-
-    <form method = "POST">
-        <!--
-    <select name = "colName">
-        <option> -- Select a column -- </option>
-    <select>
-        <input type = "submit" name = "Submit" value = "Choose" />
-    -->
-        <form action="" method="POST">
-        <input type="text" name="column" placeholder="Column">
+    <form action="" method="POST">
+        <input type="text" name="input" placeholder=" ">
  
         <input type="submit" name ="enter" value="Choose"> 
     </form>
-    <?php
-        if(isset($_POST["enter"])) {
-
-        
-            $colName = $_POST["column"];
-            echo " <br>"; 
-            echo $colName;
-
-            $sql2 = "SELECT '$colName' FROM Curator'";
-            $result2 = $conn->query($sql2);
-            $resultCheck2 = mysqli_num_rows($result2);
-            
-            if ($resultCheck2 > 0) {
-                while ($row = mysqli_fetch_array($result2)) { 
-                    echo $row[$colName];
-                        
-                    echo " <br>"; 
-                }
-            }
-        }
-    ?>
-    <form>
-    
 </body>
 </html> 
+
+<?php
+    $conn = OpenCon() ;
+    if(isset($_POST['enter'])){
+        $input = $_POST["input"];
+        echo " <br>"; 
+
+        $sql = "SELECT '$input', cID, fname, lname, education FROM CURATOR";
+        $result = mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+
+        if ($resultCheck > 0) {
+            while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
+                if($input == 'cID') {
+                    echo $row['cID'];
+                    echo " <br>";
+                } elseif($input == 'fname') {
+                    echo $row['fname'];
+                    echo " <br>";
+                } elseif($input == 'lname') {
+                    echo $row['lname'];
+                    echo " <br>"; 
+                } elseif($input == 'education') {
+                    echo $row['education'];
+                    echo " <br>";
+                } else {
+                    echo ' ';
+                }  
+            }
+        }
+
+    }
+
+?>
+
+
+
+
 
 
 
