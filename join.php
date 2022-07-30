@@ -62,7 +62,7 @@
     $selectT2 = $_POST['t2'];
 
 
-    $query = "SELECT '.$selectT1', '.$selectT2' FROM Artwork_Create_IsIn art, belongsTo bel WHERE art.artID = bel.artID";
+    $query = "SELECT '.$selectT1', '.$selectT2' FROM Artwork_Create_IsIn art, BelongsTo bel WHERE art.artID = bel.artID";
     $result = mysqli_query($conn, $query);
     $resultCheck = mysqli_num_rows($result);
 
