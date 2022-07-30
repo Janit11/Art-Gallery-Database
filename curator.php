@@ -22,7 +22,9 @@
                 echo "Curator ID: {$row['cID']} <br>
                     First Name: {$row['fname']} <br>
                     Last Name: {$row['lname']} <br>
-                    Education: {$row['education']}";
+                    Education: {$row['education']} <br>
+                    DepartmentID: {$row['departmentID']} <br>
+                    Staff Members: {$row['staff_members']}";
                 echo "<br> <br>"; 
             }
         }
