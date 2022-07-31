@@ -62,15 +62,46 @@
     $selectT2 = $_POST['t2'];
 
 
-    $query = "SELECT '.$selectT1', '.$selectT2' FROM Artwork_Create_IsIn art, BelongsTo bel WHERE art.artID = bel.artID";
+    $query = "SELECT '.$selectT1', '.$selectT2', a.artID, a.artistID, a.mID, a.title, a.material, b.artID, b.artName FROM Artwork_Create_IsIn a, BelongsTo b WHERE a.artID = b.artID";
     $result = mysqli_query($conn, $query);
     $resultCheck = mysqli_num_rows($result);
+    $row = mysqli_fetch_row($result);
 
     if (isset($_POST['join-press'])) {
         if ($resultCheck > 0) {
+            if ($selectT1 == 'artID' && $selectT2 == 'artID') {
+                echo "These fields are the same. <br> Nothing to join.";
+            }
             while ($row = mysqli_fetch_assoc($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo "$selectT1: {$row[$selectT1]} <br>
-                    $selectT2: {$row[$selectT2]}"; //***PROBLEM HERE
+                
+                if($selectT1 == 'artistID' && $selectT2 == 'artID') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'mID' && $selectT2 == 'artID') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'title' && $selectT2 == 'artID') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'material' && $selectT2 == 'artID') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'artID' && $selectT2 == 'artName') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'artistID' && $selectT2 == 'artName') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'mID' && $selectT2 == 'artName') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'title' && $selectT2 == 'artName') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } else if($selectT1 == 'material' && $selectT2 == 'artName') {
+                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+
+                } 
             }
         }
     }
