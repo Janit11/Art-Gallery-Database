@@ -36,7 +36,6 @@
     $conn = OpenCon() ;
     if(isset($_POST['enter'])){
         $price = $_POST["price"];
-        echo $price;
 
         $sql = "SELECT ticketType FROM Ticket_Sells WHERE price >'$price' ";
         $result = mysqli_query($conn, $sql);
