@@ -25,6 +25,7 @@
     <h1>Nested Aggergation Query</h1>	
     <p>Get maximun average of staff members in a department</p>
     <form action="" method="POST">
+        <input type= "text" name = "input" placeholder="Write staff members">
  
         <input type="submit" name ="enter" value="Enter"> 
     </form>
@@ -34,16 +35,18 @@
 <?php
     $conn = OpenCon() ;
     if(isset($_POST['enter'])){
+        $input = $_POST["input"];
+        echo $input;
 
-        $sql = "SELECT MAX(average) AS average2 FROM( SELECT AVG(staff_members) AS average FROM Curator GROUP BY departmentID)";
+        $sql = "SELECT MAX(average) FROM( SELECT AVG($input) AS average FROM Curator GROUP BY departmentID) AS average2";
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo 'average2';
+                echo $row['average2'];
                     
-                echo " <br>"; 
+                echo "<br>"; 
             }
         }
 
