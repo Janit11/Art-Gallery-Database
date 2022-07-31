@@ -11,7 +11,9 @@ CREATE TABLE Curator (
 	cID INTEGER PRIMARY KEY,
 	fname CHAR(20),
 	lname CHAR(20),
-	education CHAR(100));
+	education CHAR(100)
+	departmentID int,
+	staff_members int);
 
 CREATE TABLE Museum (
 	mID CHAR(100) PRIMARY KEY,
@@ -87,11 +89,11 @@ INSERT INTO ArtForm VALUES ('Paper Sculpture');
 INSERT INTO ArtForm VALUES ('Short Film');
 INSERT INTO ArtForm VALUES ('Acrylic Painting');
 
-INSERT INTO Curator VALUES (2985, 'Sarah', 'Marsh', 'Master of Arts');
-INSERT INTO Curator VALUES (1236, 'Jason', 'Lee', 'Master of Archeology');
-INSERT INTO Curator VALUES (4574, 'Josh', 'Retrick', 'Master of Arts');
-INSERT INTO Curator VALUES (5632, 'Lisa', 'Lans', 'Master of Museum Studies');
-INSERT INTO Curator VALUES (5698, 'Ann', 'Bane', 'Master of Museum Studies');
+INSERT INTO Curator VALUES (2985, 'Sarah', 'Marsh', 'Master of Arts', 1, 20);
+INSERT INTO Curator VALUES (1236, 'Jason', 'Lee', 'Master of Archeology', 2, 32);
+INSERT INTO Curator VALUES (4574, 'Josh', 'Retrick', 'Master of Arts', 2, 35);
+INSERT INTO Curator VALUES (5632, 'Lisa', 'Lans', 'Master of Museum Studies', 3, 45);
+INSERT INTO Curator VALUES (5698, 'Ann', 'Bane', 'Master of Museum Studies', 3, 40);
 
 INSERT INTO Museum VALUES ('mus1', 'Museum of Artistic History', '10am-5pm', 200);
 INSERT INTO Museum VALUES ('mus2', 'Museum of Natural History', '12pm-6pm', 300);

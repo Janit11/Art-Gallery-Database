@@ -51,7 +51,7 @@
             }
             ?>
         </select>
-        <input type="submit" name="button" value="Join">
+        <input type="submit" name="join-press" value="Join">
     </form>
     
 </body>
@@ -66,10 +66,13 @@
     $result = mysqli_query($conn, $query);
     $resultCheck = mysqli_num_rows($result);
 
+    if (isset($_POST['join-press'])) {
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_assoc($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
                 echo "$selectT1: {$row[$selectT1]} <br>
                     $selectT2: {$row[$selectT2]}"; //***PROBLEM HERE
             }
         }
+    }
+
 ?>
