@@ -8,7 +8,7 @@
 	<title>Curators</title>
 <head>
 <body>
-    <h1>Curators:</h1>
+    <h1>Curators</h1>
     <!-- <p>Please fill in all fields to add a new artist.</p> -->
 	<?php
         $conn = OpenCon();

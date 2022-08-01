@@ -10,7 +10,7 @@
 
 <head>
 <body>
-    <h1>Artists:</h1>
+    <h1>Artists</h1>
     <div class="wrapper">
         <p><a class="active" href="delete.php">Delete Artist</a></p>
         <p><a class="active" href="update.php">Update Artist</a></p>

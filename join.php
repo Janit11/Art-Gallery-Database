@@ -28,7 +28,7 @@
 
 <head>
 <body>
-    <h1>Join Query</h1>	
+    <h1>Display 2 Different Fields</h1>	
     <form action="" method="POST">
         <p>Join the columns from both tables to get the desired result. </p>
         <select name="t1" >

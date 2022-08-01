@@ -22,7 +22,7 @@
     </style>
 <head>
 <body>
-    <h1>Projection Query</h1>	
+    <h1>View Information of Curators</h1>	
     <p>Choose a column to project </p>
     <p>  </p>
     <p>cID</p>

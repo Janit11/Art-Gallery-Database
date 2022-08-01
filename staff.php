@@ -6,13 +6,14 @@
 <html>
 <head>
 	<title>Staff</title>
+    <link rel="stylesheet" href="style2.css">
 <head>
 <body>
-    <h1>Staff:</h1>
+    <h1>Staff</h1>
     <div class="wrapper">
-        <p><a class="active" href="curator.php">View Curators managing staff</a></p>
-        <p><a class="active" href="nested.php">See the maximum staff members</a></p>
-        <p><a class="active" href="division.php">Retrieve staff ID's working in same museum</a></p>
+        <p><a class="active" href="curator.php">View Curators Managing Staff</a></p>
+        <p><a class="active" href="nested.php">View Max. Staff Members</a></p>
+        <p><a class="active" href="division.php">Retrieve Staff IDs Working in Same Museum</a></p>
     </div>   
 	<?php
         $conn = OpenCon();

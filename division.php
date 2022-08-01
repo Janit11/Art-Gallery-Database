@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Division</title>
+	<title>Staff IDs Managing Exhibtion</title>
     <style>
         input{
             padding: 12px;
@@ -45,9 +45,11 @@
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 
+        echo "<br>"; 
+
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo $row['sID'];
+                echo "ID: {$row['sID']}";
                     
                 echo "<br>"; 
             }
