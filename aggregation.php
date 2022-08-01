@@ -41,8 +41,8 @@
                 echo "The current average age of all artists is: ". $row['average'];
                 echo "<br />";
 
+            }
         }
-    }
     ?>
 </body>
 </html>
