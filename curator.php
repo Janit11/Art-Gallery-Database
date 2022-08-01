@@ -6,10 +6,15 @@
 <html>
 <head>
 	<title>Curators</title>
+    <link rel="stylesheet" href="style2.css">
+
 <head>
 <body>
     <h1>Curators</h1>
-    <!-- <p>Please fill in all fields to add a new artist.</p> -->
+    <div class="wrapper">
+        <p><a class="active" href="projection.php">View Specific Information</a></p>
+
+    </div>
 	<?php
         $conn = OpenCon();
         $sql = "SELECT * FROM Curator;";

@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Staff IDs Managing Exhibtion</title>
+	<title>Division Query</title>
     <style>
         input{
             padding: 12px;
@@ -22,7 +22,7 @@
     </style>
 <head>
 <body>
-    <h1>Division Query</h1>	
+    <h1>Staff IDs Managing Exhibtion</h1>	
 
     <p>Retrieve all staff member ID's organizing all exhibitions in museum 2.</p>
     <form action="" method="POST">
