@@ -23,7 +23,7 @@
 <head>
 <body>
     <h1>Select Query</h1>	
-    <p>List all ticket types that are sold where the price of the ticket is more than $ price (max ticket price = $25) </p>
+    <p>List all ticket types where price of the ticket is more than $ price (max ticket price = $25) </p>
     <form action="" method="POST">
         <input type="text" name="price" placeholder="Price">
  
@@ -36,7 +36,7 @@
     $conn = OpenCon() ;
     if(isset($_POST['enter'])){
         $price = $_POST["price"];
-        
+        echo $price;
 
         $sql = "SELECT ticketType FROM Ticket_Sells WHERE price >'$price' ";
         $result = mysqli_query($conn, $sql);

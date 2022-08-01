@@ -23,7 +23,7 @@
 <head>
 <body>
     <h1>Division Query</h1>	
-    
+
     <p>Retrieve all staff member ID's organizing all exhibitions in museum 2.</p>
     <form action="" method="POST">
  
@@ -36,17 +36,18 @@
     $conn = OpenCon() ;
     if(isset($_POST['enter'])){
      
-        $sql = "SELECT Distinct T1.sID FROM Organizes as T1 WHERE NOT EXISTS 
-        (SELECT exID FROM Exhibition_Held WHERE mID = 'mus2')
+        $sql = "SELECT DISTINCT T1.sID FROM Organizes as T1 
+        WHERE NOT EXISTS (
+        (SELECT exID FROM Exhibition_Held WHERE mID = mus2)
         EXCEPT 
-        (SELECT exID FROM Organizes WHERE T2.sID = T1.sID)) ";
+        (SELECT exID FROM Organizes as T2 WHERE T2.sID = T1.sID)) ";
     
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
 
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo $row['T1'];
+                echo $row['sID'];
                     
                 echo "<br>"; 
             }
