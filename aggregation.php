@@ -24,7 +24,7 @@
 <body>	
     <p>Retrieve the average age or rating of all artists </p>
     <form action="" method="POST">
-        <input type="text" name="option" placeholder="Choose age or rating">
+        <input type="text" name="option" placeholder="Type age or rating">
  
         <input type="submit" name ="enter" value="Enter"> 
     </form>
