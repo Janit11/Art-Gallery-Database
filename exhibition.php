@@ -1,6 +1,6 @@
 <?php
     include_once 'include/dbh.inc.php';
-    require 'header.php';
+    require 'header.php';   
 ?>
 <!DOCTYPE html>
 <html>
