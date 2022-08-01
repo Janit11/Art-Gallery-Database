@@ -23,7 +23,7 @@
 <head>
 <body>
     <h1>Nested Aggergation Query</h1>	
-    <p>Get maximun average of staff members in a department</p>
+    <p>Get the current maximun average of staff members in all departments</p>
     <form action="" method="POST">
         
  
@@ -42,12 +42,11 @@
             if ($resultCheck > 0) {
                 while ($row = mysqli_fetch_assoc($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
                     $datas[] = $row;
-
                 } 
                 
             } 
             foreach ($datas[0] as $data) {
-                echo "The current maximum value of the average of staff members in a department is: ".round($data,2);
+                echo "The current maximum value of the average of staff members in all departments is: ".round($data,2);
             }
         }
 
