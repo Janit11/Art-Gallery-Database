@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nested</title>
+	<title>Nested Aggregation Query</title>
     <style>
         input{
             padding: 12px;
@@ -22,7 +22,7 @@
     </style>
 <head>
 <body>
-    <h1>Nested Aggergation Query</h1>	
+    <h1>Average Number of Staff</h1>	
     <p>Get the current maximum average of staff members in a department</p>
     <form action="" method="POST">
         
