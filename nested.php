@@ -23,7 +23,7 @@
 <head>
 <body>
     <h1>Nested Aggergation Query</h1>	
-    <p>Get the current maximum average of staff members in all departments</p>
+    <p>Get the current maximum average of staff members in a department</p>
     <form action="" method="POST">
         
  
@@ -46,7 +46,7 @@
                 
             } 
             foreach ($datas[0] as $data) {
-                echo "The current maximum value of the average of staff members in all departments is: ".round($data,2);
+                echo "The current maximum value of the average of staff members in a department is: ".round($data,2);
             }
         }
 
