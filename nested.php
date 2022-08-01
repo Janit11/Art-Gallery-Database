@@ -23,7 +23,7 @@
 <head>
 <body>
     <h1>Nested Aggergation Query</h1>	
-    <p>Get the current maximun average of staff members in all departments</p>
+    <p>Get the current maximum average of staff members in all departments</p>
     <form action="" method="POST">
         
  

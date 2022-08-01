@@ -44,12 +44,10 @@
     
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
-        
-        echo "<br>";
 
         if ($resultCheck > 0) {
             while ($row = mysqli_fetch_array($result)) { //"mysqli_fetch_assoc" fetches all the info from $result (php function)
-                echo "Staff ID: {$row['sID']}";
+                echo $row['sID'];
                     
                 echo "<br>"; 
             }
