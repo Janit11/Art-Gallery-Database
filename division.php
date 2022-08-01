@@ -38,7 +38,7 @@
      
         $sql = "SELECT DISTINCT T1.sID FROM Organizes as T1 
         WHERE NOT EXISTS (
-        (SELECT exID FROM Exhibition_Held WHERE mID = mus2)
+        (SELECT exID FROM Exhibition_Held WHERE mID = 'mus2')
         EXCEPT 
         (SELECT exID FROM Organizes as T2 WHERE T2.sID = T1.sID)) ";
     
