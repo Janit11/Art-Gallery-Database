@@ -22,6 +22,7 @@
     </style>
 <head>
 <body>	
+    <h1>Aggregation Query</h1>
     <p>Retrieve the average age or rating of all artists </p>
     <form action="" method="POST">
         <input type="text" name="option" placeholder="Type age or rating">
