@@ -78,28 +78,28 @@
                     echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
 
                 } else if($selectT1 == 'mID' && $selectT2 == 'artID') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+                    echo "$selectT1: {$row['mID']} <br> $selectT2: {$row['artID']} <br><br>";
 
                 } else if($selectT1 == 'title' && $selectT2 == 'artID') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+                    echo "$selectT1: {$row['title']} <br> $selectT2: {$row['artID']} <br><br>";
 
                 } else if($selectT1 == 'material' && $selectT2 == 'artID') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artID']} <br><br>";
+                    echo "$selectT1: {$row['material']} <br> $selectT2: {$row['artID']} <br><br>";
 
                 } else if($selectT1 == 'artID' && $selectT2 == 'artName') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artName']} <br><br>";
+                    echo "$selectT1: {$row['artID']} <br> $selectT2: {$row['artName']} <br><br>";
 
                 } else if($selectT1 == 'artistID' && $selectT2 == 'artName') {
                     echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artName']} <br><br>";
 
                 } else if($selectT1 == 'mID' && $selectT2 == 'artName') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artName']} <br><br>";
+                    echo "$selectT1: {$row['mID']} <br> $selectT2: {$row['artName']} <br><br>";
 
                 } else if($selectT1 == 'title' && $selectT2 == 'artName') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artName']} <br><br>";
+                    echo "$selectT1: {$row['title']} <br> $selectT2: {$row['artName']} <br><br>";
 
                 } else if($selectT1 == 'material' && $selectT2 == 'artName') {
-                    echo "$selectT1: {$row['artistID']} <br> $selectT2: {$row['artName']} <br><br>";
+                    echo "$selectT1: {$row['material']} <br> $selectT2: {$row['artName']} <br><br>";
 
                 } 
             }
