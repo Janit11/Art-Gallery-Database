@@ -1,3 +1,3 @@
 # Art-Gallery-Database
 
-git commit hash here: commit 41fa0d6972d0f8420803553e3c2df0d76219f186
+git commit hash here: commit cb3593e364cd6e81b29a6c4130f27e963e4e19d6
