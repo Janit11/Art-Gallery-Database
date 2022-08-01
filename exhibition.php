@@ -13,6 +13,8 @@
     <div class="wrapper">
         <p><a class="active" href="ticket_sells.php">View All Tickets</a></p>
         <p><a class="active" href="curator.php">View Curators managing Exhibitions</a></p>
+        <p><a class="active" href="division.php">Staff Members Organizing Exhibition</a></p>
+
     </div>    
 	<?php
         $conn = OpenCon();
